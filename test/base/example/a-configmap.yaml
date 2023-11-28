@@ -1,0 +1,10 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: a-configmap
+  namespace: a-namespace
+data:
+  data.toml: |
+    [[data]]
+    some = "data"
+    goes = "here"

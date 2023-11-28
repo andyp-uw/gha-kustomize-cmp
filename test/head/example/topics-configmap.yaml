@@ -1,0 +1,7 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: kafka-topics
+data:
+  HUGE_TOPIC: all.the.events
+  DEAD_LETTER_TOPIC: dead.letter.events

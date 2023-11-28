@@ -1,0 +1,17 @@
+on: [pull_request]
+
+jobs:
+  summarise_changes:
+    runs-on: ubuntu-latest
+    name: Kustomize summarise
+    steps:
+      # To use this repository's private action,
+      # you must check out the repository
+      - name: Checkout
+        uses: actions/checkout@v4.1.1
+        with:
+          ref: ${{ github.event.pull_request.head.sha }}
+          fetch-depth: 0
+      - name: summarise
+        uses: ./
+        id: summarise
